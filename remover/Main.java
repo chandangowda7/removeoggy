@@ -5,7 +5,18 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void removeOggy(ArrayList<String> names) {
+    List<String> duplicates=new ArrayList<String>(names);
+     names.clear();
+    for(int i=duplicates.size()-1;i>=0;i--)
+    {
+        if(duplicates.get(i).startsWith("oggy")) {
+           
+        }
+        else
+           names.add(duplicates.get(i));
         return;
+    
+        
     }
     public static boolean oggyIsRemoved(ArrayList<String> names) {
         List<String> oggys = names.stream().filter(it -> it.contains("oggy")).collect(Collectors.toList());
